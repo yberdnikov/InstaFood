@@ -13,11 +13,11 @@
 		84422ACB162A87FF0077E6D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84422AC9162A87FF0077E6D5 /* InfoPlist.strings */; };
 		84422ACD162A87FF0077E6D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84422ACC162A87FF0077E6D5 /* main.m */; };
 		84422AD1162A87FF0077E6D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84422AD0162A87FF0077E6D5 /* AppDelegate.m */; };
-		84422AD3162A87FF0077E6D5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 84422AD2162A87FF0077E6D5 /* Default.png */; };
-		84422AD5162A87FF0077E6D5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84422AD4162A87FF0077E6D5 /* Default@2x.png */; };
-		84422AD7162A87FF0077E6D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84422AD6162A87FF0077E6D5 /* Default-568h@2x.png */; };
 		84422ADA162A87FF0077E6D5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84422AD8162A87FF0077E6D5 /* MainStoryboard.storyboard */; };
 		84422ADD162A87FF0077E6D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84422ADC162A87FF0077E6D5 /* ViewController.m */; };
+		84422AE6162A88360077E6D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84422AE3162A88360077E6D5 /* Default-568h@2x.png */; };
+		84422AE7162A88360077E6D5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 84422AE4162A88360077E6D5 /* Default.png */; };
+		84422AE8162A88360077E6D5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84422AE5162A88360077E6D5 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +31,12 @@
 		84422ACE162A87FF0077E6D5 /* InstaFood-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaFood-Prefix.pch"; sourceTree = "<group>"; };
 		84422ACF162A87FF0077E6D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84422AD0162A87FF0077E6D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84422AD2162A87FF0077E6D5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		84422AD4162A87FF0077E6D5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		84422AD6162A87FF0077E6D5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		84422AD9162A87FF0077E6D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		84422ADB162A87FF0077E6D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		84422ADC162A87FF0077E6D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84422AE3162A88360077E6D5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		84422AE4162A88360077E6D5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		84422AE5162A88360077E6D5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,13 +96,13 @@
 		84422AC7162A87FF0077E6D5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84422AE3162A88360077E6D5 /* Default-568h@2x.png */,
+				84422AE4162A88360077E6D5 /* Default.png */,
+				84422AE5162A88360077E6D5 /* Default@2x.png */,
 				84422AC8162A87FF0077E6D5 /* InstaFood-Info.plist */,
 				84422AC9162A87FF0077E6D5 /* InfoPlist.strings */,
 				84422ACC162A87FF0077E6D5 /* main.m */,
 				84422ACE162A87FF0077E6D5 /* InstaFood-Prefix.pch */,
-				84422AD2162A87FF0077E6D5 /* Default.png */,
-				84422AD4162A87FF0077E6D5 /* Default@2x.png */,
-				84422AD6162A87FF0077E6D5 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -159,10 +159,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84422ACB162A87FF0077E6D5 /* InfoPlist.strings in Resources */,
-				84422AD3162A87FF0077E6D5 /* Default.png in Resources */,
-				84422AD5162A87FF0077E6D5 /* Default@2x.png in Resources */,
-				84422AD7162A87FF0077E6D5 /* Default-568h@2x.png in Resources */,
 				84422ADA162A87FF0077E6D5 /* MainStoryboard.storyboard in Resources */,
+				84422AE6162A88360077E6D5 /* Default-568h@2x.png in Resources */,
+				84422AE7162A88360077E6D5 /* Default.png in Resources */,
+				84422AE8162A88360077E6D5 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
