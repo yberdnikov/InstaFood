@@ -7,8 +7,12 @@
 //
 
 #import "EditPhotoViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
-@interface EditPhotoViewController ()
+@interface EditPhotoViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+- (IBAction)loadPhotoAblum:(id)sender;
+- (IBAction)loadCamera:(id)sender;
 
 @end
 
@@ -26,6 +30,28 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)loadPhotoAblum:(id)sender {
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
+}
+
+- (IBAction)loadCamera:(id)sender {
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"%@", info);
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
