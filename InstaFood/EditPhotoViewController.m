@@ -9,9 +9,23 @@
 #import "EditPhotoViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "AFSubPhotoEditorViewController.h"
-#import <Social/Social.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface EditPhotoViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AFPhotoEditorControllerDelegate>
+void kShowAlert (NSString *message)
+{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"InstaFood"
+                                                   message:message
+                                                  delegate:nil
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
+    [alert show];
+}
+
+@interface EditPhotoViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AFPhotoEditorControllerDelegate, CLLocationManagerDelegate>
+
+@property (nonatomic, strong) CLGeocoder *geocoder;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 - (IBAction)loadPhotoAblum:(id)sender;
 - (IBAction)loadCamera:(id)sender;
@@ -19,6 +33,9 @@
 @end
 
 @implementation EditPhotoViewController
+{
+    UIImage *editedImage;
+}
 
 - (void)viewDidLoad
 {
@@ -72,10 +89,12 @@
 -(void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
 {
     [self dismissViewControllerAnimated:YES completion:^{
-        NSString *text = @"#InstaFood";
-        NSArray *activityItems = @[image, text];
-        UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
-        [self presentViewController:activityVC animated:YES completion:nil];
+        self.geocoder = [[CLGeocoder alloc] init];
+        self.locationManager = [[CLLocationManager alloc]init];
+        _locationManager.delegate = self;
+        [_locationManager startUpdatingLocation];
+
+        editedImage = image;
     }];
 }
 
@@ -83,4 +102,32 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - CLLocationManagerDelegate
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    kShowAlert([error localizedDescription]);
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    [self.geocoder reverseGeocodeLocation:manager.location completionHandler:
+     ^(NSArray *placemarks, NSError *error) {
+         CLPlacemark *placemark = [placemarks objectAtIndex:0];
+         NSLog(@"Placemark array: %@",placemark.addressDictionary);
+         
+         //String to address
+         NSString *city = [[placemark.addressDictionary valueForKey:@"City"]stringByReplacingOccurrencesOfString:@" " withString:@""];
+         NSString *name = [[placemark.addressDictionary valueForKey:@"Name"]stringByReplacingOccurrencesOfString:@" " withString:@""];
+         
+         NSString *text = [NSString stringWithFormat:@"#InstaFood #%@ #%@" ,city, name];
+         NSArray *activityItems = @[editedImage, text];
+         UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+
+         [self presentViewController:activityVC animated:YES completion:nil];
+         [manager stopUpdatingLocation];
+     }];
+}
+
 @end

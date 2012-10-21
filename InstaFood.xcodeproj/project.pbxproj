@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842486AB16336A3C00EC3C0A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842486AA16336A3C00EC3C0A /* CoreLocation.framework */; };
+		842486AE16336A4100EC3C0A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842486AD16336A4000EC3C0A /* MapKit.framework */; };
+		842486B1163370DA00EC3C0A /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842486B0163370DA00EC3C0A /* ExploreViewController.m */; };
 		84422AC1162A87FF0077E6D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84422AC0162A87FF0077E6D5 /* UIKit.framework */; };
 		84422AC3162A87FF0077E6D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84422AC2162A87FF0077E6D5 /* Foundation.framework */; };
 		84422AC5162A87FF0077E6D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84422AC4162A87FF0077E6D5 /* CoreGraphics.framework */; };
@@ -29,6 +32,11 @@
 		8476F4E71632F35100AEF3AE /* AFSubPhotoEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4E61632F35100AEF3AE /* AFSubPhotoEditorViewController.m */; };
 		8476F4E91632F72000AEF3AE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8476F4E81632F72000AEF3AE /* AssetsLibrary.framework */; };
 		8476F4F3163302FE00AEF3AE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8476F4F2163302FE00AEF3AE /* Social.framework */; };
+		8496900C163390FB004A558F /* TwitterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496900B163390FB004A558F /* TwitterManager.m */; };
+		8496900F16339421004A558F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8496900E16339421004A558F /* Accounts.framework */; };
+		84969017163395E3004A558F /* Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 84969012163395E3004A558F /* Metadata.m */; };
+		84969018163395E3004A558F /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = 84969014163395E3004A558F /* Results.m */; };
+		84969019163395E3004A558F /* TweetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84969016163395E3004A558F /* TweetObject.m */; };
 		84CE05F61632C91400271541 /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CE05E01632C91400271541 /* backbutton.png */; };
 		84CE05F71632C91400271541 /* backbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CE05E11632C91400271541 /* backbutton@2x.png */; };
 		84CE05F81632C91400271541 /* barbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CE05E21632C91400271541 /* barbutton.png */; };
@@ -59,6 +67,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842486AA16336A3C00EC3C0A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		842486AD16336A4000EC3C0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		842486AF163370DA00EC3C0A /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
+		842486B0163370DA00EC3C0A /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
 		84422ABC162A87FF0077E6D5 /* InstaFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84422AC0162A87FF0077E6D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84422AC2162A87FF0077E6D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +104,15 @@
 		8476F4E61632F35100AEF3AE /* AFSubPhotoEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSubPhotoEditorViewController.m; sourceTree = "<group>"; };
 		8476F4E81632F72000AEF3AE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8476F4F2163302FE00AEF3AE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8496900A163390FB004A558F /* TwitterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterManager.h; sourceTree = "<group>"; };
+		8496900B163390FB004A558F /* TwitterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterManager.m; sourceTree = "<group>"; };
+		8496900E16339421004A558F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		84969011163395E3004A558F /* Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metadata.h; sourceTree = "<group>"; };
+		84969012163395E3004A558F /* Metadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Metadata.m; sourceTree = "<group>"; };
+		84969013163395E3004A558F /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Results.h; sourceTree = "<group>"; };
+		84969014163395E3004A558F /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Results.m; sourceTree = "<group>"; };
+		84969015163395E3004A558F /* TweetObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetObject.h; sourceTree = "<group>"; };
+		84969016163395E3004A558F /* TweetObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetObject.m; sourceTree = "<group>"; };
 		84CE05E01632C91400271541 /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton.png; sourceTree = "<group>"; };
 		84CE05E11632C91400271541 /* backbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@2x.png"; sourceTree = "<group>"; };
 		84CE05E21632C91400271541 /* barbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barbutton.png; sourceTree = "<group>"; };
@@ -127,6 +148,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8496900F16339421004A558F /* Accounts.framework in Frameworks */,
+				842486AE16336A4100EC3C0A /* MapKit.framework in Frameworks */,
+				842486AB16336A3C00EC3C0A /* CoreLocation.framework in Frameworks */,
 				8476F4F3163302FE00AEF3AE /* Social.framework in Frameworks */,
 				8476F4E91632F72000AEF3AE /* AssetsLibrary.framework in Frameworks */,
 				8476F4E41632F2AD00AEF3AE /* CoreData.framework in Frameworks */,
@@ -165,6 +189,9 @@
 		84422ABF162A87FF0077E6D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8496900E16339421004A558F /* Accounts.framework */,
+				842486AD16336A4000EC3C0A /* MapKit.framework */,
+				842486AA16336A3C00EC3C0A /* CoreLocation.framework */,
 				8476F4F2163302FE00AEF3AE /* Social.framework */,
 				8476F4E81632F72000AEF3AE /* AssetsLibrary.framework */,
 				8476F4E31632F2AD00AEF3AE /* CoreData.framework */,
@@ -186,6 +213,8 @@
 				8476F4CC1632F26800AEF3AE /* AviarySDK */,
 				84422ACF162A87FF0077E6D5 /* AppDelegate.h */,
 				84422AD0162A87FF0077E6D5 /* AppDelegate.m */,
+				8496900A163390FB004A558F /* TwitterManager.h */,
+				8496900B163390FB004A558F /* TwitterManager.m */,
 				84422AD8162A87FF0077E6D5 /* MainStoryboard.storyboard */,
 				84CE06181632CB3700271541 /* CustomTabBar.h */,
 				84CE06191632CB3700271541 /* CustomTabBar.m */,
@@ -193,6 +222,9 @@
 				84422ADC162A87FF0077E6D5 /* EditPhotoViewController.m */,
 				8476F4E51632F35100AEF3AE /* AFSubPhotoEditorViewController.h */,
 				8476F4E61632F35100AEF3AE /* AFSubPhotoEditorViewController.m */,
+				842486AF163370DA00EC3C0A /* ExploreViewController.h */,
+				842486B0163370DA00EC3C0A /* ExploreViewController.m */,
+				84969010163395D4004A558F /* Objects */,
 				84422AC7162A87FF0077E6D5 /* Supporting Files */,
 			);
 			path = InstaFood;
@@ -246,6 +278,19 @@
 				8476F4D51632F26800AEF3AE /* AviarySDKResources.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		84969010163395D4004A558F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				84969011163395E3004A558F /* Metadata.h */,
+				84969012163395E3004A558F /* Metadata.m */,
+				84969013163395E3004A558F /* Results.h */,
+				84969014163395E3004A558F /* Results.m */,
+				84969015163395E3004A558F /* TweetObject.h */,
+				84969016163395E3004A558F /* TweetObject.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		84CE05DF1632C91400271541 /* Images */ = {
@@ -375,6 +420,11 @@
 				84422ADD162A87FF0077E6D5 /* EditPhotoViewController.m in Sources */,
 				84CE061A1632CB3700271541 /* CustomTabBar.m in Sources */,
 				8476F4E71632F35100AEF3AE /* AFSubPhotoEditorViewController.m in Sources */,
+				842486B1163370DA00EC3C0A /* ExploreViewController.m in Sources */,
+				8496900C163390FB004A558F /* TwitterManager.m in Sources */,
+				84969017163395E3004A558F /* Metadata.m in Sources */,
+				84969018163395E3004A558F /* Results.m in Sources */,
+				84969019163395E3004A558F /* TweetObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

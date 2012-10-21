@@ -43,5 +43,7 @@
 		<string>Vollkorn-Italic.ttf</string>
 		<string>Vollkorn-Regular.ttf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>InstaFood will not distort or delete any photos in your photo ablum</string>
 </dict>
 </plist>
