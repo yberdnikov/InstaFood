@@ -1,3 +1,6 @@
 [submodule "Mobile-Feather-SDK-for-iOS"]
 	path = Mobile-Feather-SDK-for-iOS
 	url = git://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS.git
+[submodule "SDWebImage"]
+	path = SDWebImage
+	url = git://github.com/rs/SDWebImage.git

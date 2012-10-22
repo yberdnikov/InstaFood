@@ -32,11 +32,20 @@
 		8476F4E71632F35100AEF3AE /* AFSubPhotoEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4E61632F35100AEF3AE /* AFSubPhotoEditorViewController.m */; };
 		8476F4E91632F72000AEF3AE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8476F4E81632F72000AEF3AE /* AssetsLibrary.framework */; };
 		8476F4F3163302FE00AEF3AE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8476F4F2163302FE00AEF3AE /* Social.framework */; };
+		8478CDF51635074F00E950A9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8478CDF41635074F00E950A9 /* ImageIO.framework */; };
+		8478CDF816350DB100E950A9 /* ExploreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CDF716350DB100E950A9 /* ExploreCell.m */; };
+		8478CE111635329500E950A9 /* DescriptionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CDFE1635329500E950A9 /* DescriptionClass.m */; };
+		8478CE121635329500E950A9 /* Entities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CE001635329500E950A9 /* Entities.m */; };
+		8478CE131635329500E950A9 /* Hashtags.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CE021635329500E950A9 /* Hashtags.m */; };
+		8478CE141635329500E950A9 /* Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CE041635329500E950A9 /* Metadata.m */; };
+		8478CE151635329500E950A9 /* SearchMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CE061635329500E950A9 /* SearchMetadata.m */; };
+		8478CE161635329500E950A9 /* Statuses.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CE081635329500E950A9 /* Statuses.m */; };
+		8478CE171635329500E950A9 /* TweetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CE0A1635329500E950A9 /* TweetObject.m */; };
+		8478CE181635329500E950A9 /* Url.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CE0C1635329500E950A9 /* Url.m */; };
+		8478CE191635329500E950A9 /* Urls.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CE0E1635329500E950A9 /* Urls.m */; };
+		8478CE1A1635329500E950A9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CE101635329500E950A9 /* User.m */; };
 		8496900C163390FB004A558F /* TwitterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496900B163390FB004A558F /* TwitterManager.m */; };
 		8496900F16339421004A558F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8496900E16339421004A558F /* Accounts.framework */; };
-		84969017163395E3004A558F /* Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 84969012163395E3004A558F /* Metadata.m */; };
-		84969018163395E3004A558F /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = 84969014163395E3004A558F /* Results.m */; };
-		84969019163395E3004A558F /* TweetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84969016163395E3004A558F /* TweetObject.m */; };
 		84CE05F61632C91400271541 /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CE05E01632C91400271541 /* backbutton.png */; };
 		84CE05F71632C91400271541 /* backbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CE05E11632C91400271541 /* backbutton@2x.png */; };
 		84CE05F81632C91400271541 /* barbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CE05E21632C91400271541 /* barbutton.png */; };
@@ -104,15 +113,32 @@
 		8476F4E61632F35100AEF3AE /* AFSubPhotoEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSubPhotoEditorViewController.m; sourceTree = "<group>"; };
 		8476F4E81632F72000AEF3AE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8476F4F2163302FE00AEF3AE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8478CDF41635074F00E950A9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		8478CDF616350DB100E950A9 /* ExploreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreCell.h; sourceTree = "<group>"; };
+		8478CDF716350DB100E950A9 /* ExploreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreCell.m; sourceTree = "<group>"; };
+		8478CDFD1635329500E950A9 /* DescriptionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionClass.h; sourceTree = "<group>"; };
+		8478CDFE1635329500E950A9 /* DescriptionClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionClass.m; sourceTree = "<group>"; };
+		8478CDFF1635329500E950A9 /* Entities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entities.h; sourceTree = "<group>"; };
+		8478CE001635329500E950A9 /* Entities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entities.m; sourceTree = "<group>"; };
+		8478CE011635329500E950A9 /* Hashtags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hashtags.h; sourceTree = "<group>"; };
+		8478CE021635329500E950A9 /* Hashtags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hashtags.m; sourceTree = "<group>"; };
+		8478CE031635329500E950A9 /* Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metadata.h; sourceTree = "<group>"; };
+		8478CE041635329500E950A9 /* Metadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Metadata.m; sourceTree = "<group>"; };
+		8478CE051635329500E950A9 /* SearchMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchMetadata.h; sourceTree = "<group>"; };
+		8478CE061635329500E950A9 /* SearchMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchMetadata.m; sourceTree = "<group>"; };
+		8478CE071635329500E950A9 /* Statuses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statuses.h; sourceTree = "<group>"; };
+		8478CE081635329500E950A9 /* Statuses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Statuses.m; sourceTree = "<group>"; };
+		8478CE091635329500E950A9 /* TweetObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetObject.h; sourceTree = "<group>"; };
+		8478CE0A1635329500E950A9 /* TweetObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetObject.m; sourceTree = "<group>"; };
+		8478CE0B1635329500E950A9 /* Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Url.h; sourceTree = "<group>"; };
+		8478CE0C1635329500E950A9 /* Url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Url.m; sourceTree = "<group>"; };
+		8478CE0D1635329500E950A9 /* Urls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Urls.h; sourceTree = "<group>"; };
+		8478CE0E1635329500E950A9 /* Urls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Urls.m; sourceTree = "<group>"; };
+		8478CE0F1635329500E950A9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		8478CE101635329500E950A9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8496900A163390FB004A558F /* TwitterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterManager.h; sourceTree = "<group>"; };
 		8496900B163390FB004A558F /* TwitterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterManager.m; sourceTree = "<group>"; };
 		8496900E16339421004A558F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		84969011163395E3004A558F /* Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metadata.h; sourceTree = "<group>"; };
-		84969012163395E3004A558F /* Metadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Metadata.m; sourceTree = "<group>"; };
-		84969013163395E3004A558F /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Results.h; sourceTree = "<group>"; };
-		84969014163395E3004A558F /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Results.m; sourceTree = "<group>"; };
-		84969015163395E3004A558F /* TweetObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetObject.h; sourceTree = "<group>"; };
-		84969016163395E3004A558F /* TweetObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetObject.m; sourceTree = "<group>"; };
 		84CE05E01632C91400271541 /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton.png; sourceTree = "<group>"; };
 		84CE05E11632C91400271541 /* backbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@2x.png"; sourceTree = "<group>"; };
 		84CE05E21632C91400271541 /* barbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barbutton.png; sourceTree = "<group>"; };
@@ -148,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8478CDF51635074F00E950A9 /* ImageIO.framework in Frameworks */,
 				8496900F16339421004A558F /* Accounts.framework in Frameworks */,
 				842486AE16336A4100EC3C0A /* MapKit.framework in Frameworks */,
 				842486AB16336A3C00EC3C0A /* CoreLocation.framework in Frameworks */,
@@ -189,6 +216,7 @@
 		84422ABF162A87FF0077E6D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8478CDF41635074F00E950A9 /* ImageIO.framework */,
 				8496900E16339421004A558F /* Accounts.framework */,
 				842486AD16336A4000EC3C0A /* MapKit.framework */,
 				842486AA16336A3C00EC3C0A /* CoreLocation.framework */,
@@ -224,6 +252,8 @@
 				8476F4E61632F35100AEF3AE /* AFSubPhotoEditorViewController.m */,
 				842486AF163370DA00EC3C0A /* ExploreViewController.h */,
 				842486B0163370DA00EC3C0A /* ExploreViewController.m */,
+				8478CDF616350DB100E950A9 /* ExploreCell.h */,
+				8478CDF716350DB100E950A9 /* ExploreCell.m */,
 				84969010163395D4004A558F /* Objects */,
 				84422AC7162A87FF0077E6D5 /* Supporting Files */,
 			);
@@ -283,12 +313,26 @@
 		84969010163395D4004A558F /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				84969011163395E3004A558F /* Metadata.h */,
-				84969012163395E3004A558F /* Metadata.m */,
-				84969013163395E3004A558F /* Results.h */,
-				84969014163395E3004A558F /* Results.m */,
-				84969015163395E3004A558F /* TweetObject.h */,
-				84969016163395E3004A558F /* TweetObject.m */,
+				8478CDFD1635329500E950A9 /* DescriptionClass.h */,
+				8478CDFE1635329500E950A9 /* DescriptionClass.m */,
+				8478CDFF1635329500E950A9 /* Entities.h */,
+				8478CE001635329500E950A9 /* Entities.m */,
+				8478CE011635329500E950A9 /* Hashtags.h */,
+				8478CE021635329500E950A9 /* Hashtags.m */,
+				8478CE031635329500E950A9 /* Metadata.h */,
+				8478CE041635329500E950A9 /* Metadata.m */,
+				8478CE051635329500E950A9 /* SearchMetadata.h */,
+				8478CE061635329500E950A9 /* SearchMetadata.m */,
+				8478CE071635329500E950A9 /* Statuses.h */,
+				8478CE081635329500E950A9 /* Statuses.m */,
+				8478CE091635329500E950A9 /* TweetObject.h */,
+				8478CE0A1635329500E950A9 /* TweetObject.m */,
+				8478CE0B1635329500E950A9 /* Url.h */,
+				8478CE0C1635329500E950A9 /* Url.m */,
+				8478CE0D1635329500E950A9 /* Urls.h */,
+				8478CE0E1635329500E950A9 /* Urls.m */,
+				8478CE0F1635329500E950A9 /* User.h */,
+				8478CE101635329500E950A9 /* User.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -422,9 +466,17 @@
 				8476F4E71632F35100AEF3AE /* AFSubPhotoEditorViewController.m in Sources */,
 				842486B1163370DA00EC3C0A /* ExploreViewController.m in Sources */,
 				8496900C163390FB004A558F /* TwitterManager.m in Sources */,
-				84969017163395E3004A558F /* Metadata.m in Sources */,
-				84969018163395E3004A558F /* Results.m in Sources */,
-				84969019163395E3004A558F /* TweetObject.m in Sources */,
+				8478CDF816350DB100E950A9 /* ExploreCell.m in Sources */,
+				8478CE111635329500E950A9 /* DescriptionClass.m in Sources */,
+				8478CE121635329500E950A9 /* Entities.m in Sources */,
+				8478CE131635329500E950A9 /* Hashtags.m in Sources */,
+				8478CE141635329500E950A9 /* Metadata.m in Sources */,
+				8478CE151635329500E950A9 /* SearchMetadata.m in Sources */,
+				8478CE161635329500E950A9 /* Statuses.m in Sources */,
+				8478CE171635329500E950A9 /* TweetObject.m in Sources */,
+				8478CE181635329500E950A9 /* Url.m in Sources */,
+				8478CE191635329500E950A9 /* Urls.m in Sources */,
+				8478CE1A1635329500E950A9 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

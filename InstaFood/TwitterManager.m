@@ -10,7 +10,7 @@
 
 #import "TwitterManager.h"
 
-#define kTwitterSearch @"http://search.twitter.com/search.json"
+#define kTwitterSearch @"https://api.twitter.com/1.1/search/tweets.json"
 
 @implementation TwitterManager
 
