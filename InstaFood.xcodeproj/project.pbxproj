@@ -32,7 +32,6 @@
 		8476F4E71632F35100AEF3AE /* AFSubPhotoEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4E61632F35100AEF3AE /* AFSubPhotoEditorViewController.m */; };
 		8476F4E91632F72000AEF3AE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8476F4E81632F72000AEF3AE /* AssetsLibrary.framework */; };
 		8476F4F3163302FE00AEF3AE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8476F4F2163302FE00AEF3AE /* Social.framework */; };
-		8478CDF51635074F00E950A9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8478CDF41635074F00E950A9 /* ImageIO.framework */; };
 		8478CDF816350DB100E950A9 /* ExploreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CDF716350DB100E950A9 /* ExploreCell.m */; };
 		8478CE111635329500E950A9 /* DescriptionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CDFE1635329500E950A9 /* DescriptionClass.m */; };
 		8478CE121635329500E950A9 /* Entities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478CE001635329500E950A9 /* Entities.m */; };
@@ -82,6 +81,8 @@
 		84E0876A163553E9005E3D58 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0875F163553E9005E3D58 /* AFURLConnectionOperation.m */; };
 		84E0876B163553E9005E3D58 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E08761163553E9005E3D58 /* AFXMLRequestOperation.m */; };
 		84E0876C163553E9005E3D58 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E08763163553E9005E3D58 /* UIImageView+AFNetworking.m */; };
+		84E08770163555CF005E3D58 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0876F163555CF005E3D58 /* SystemConfiguration.framework */; };
+		84E0877616355B2F005E3D58 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0876D163555CA005E3D58 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,6 +196,8 @@
 		84E08761163553E9005E3D58 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		84E08762163553E9005E3D58 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		84E08763163553E9005E3D58 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		84E0876D163555CA005E3D58 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		84E0876F163555CF005E3D58 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +205,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8478CDF51635074F00E950A9 /* ImageIO.framework in Frameworks */,
+				84E0877616355B2F005E3D58 /* MobileCoreServices.framework in Frameworks */,
+				84E08770163555CF005E3D58 /* SystemConfiguration.framework in Frameworks */,
 				8496900F16339421004A558F /* Accounts.framework in Frameworks */,
 				842486AE16336A4100EC3C0A /* MapKit.framework in Frameworks */,
 				842486AB16336A3C00EC3C0A /* CoreLocation.framework in Frameworks */,
@@ -244,6 +248,8 @@
 		84422ABF162A87FF0077E6D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84E0876F163555CF005E3D58 /* SystemConfiguration.framework */,
+				84E0876D163555CA005E3D58 /* MobileCoreServices.framework */,
 				8478CDF41635074F00E950A9 /* ImageIO.framework */,
 				8496900E16339421004A558F /* Accounts.framework */,
 				842486AD16336A4000EC3C0A /* MapKit.framework */,

@@ -14,6 +14,7 @@
 #import "Entities.h"
 #import "Urls.h"
 #import "UIImageView+AFNetworking.h"
+#import "AFJSONRequestOperation.h"
 
 @interface ExploreViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -33,7 +34,6 @@
         if (hasTwitterAccount) {
             [[TwitterManager sharedInstance]getTwitterFeedWithBlock:^(id feedData, NSError *error) {
                 if (!error) {
-                    NSLog(@"feedData: '%@'", feedData);
                     TweetObject *tweetObject = [TweetObject modelObjectWithDictionary:feedData];
                     tweets = [NSMutableArray new];
                     
@@ -77,8 +77,18 @@
     Statuses *tweet = [tweets objectAtIndex:indexPath.row];
     if (tweet.entities.urls.count > 0) {
         Urls *urls = [tweet.entities.urls objectAtIndex:0];
-        NSURL *imageURL = [NSURL URLWithString:urls.expanded_url];
-        [cell.imageView setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"Camera.png"]];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.instagram.com/oembed?url=%@",urls.expanded_url]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                                                            success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                                                                NSLog(@"response:%@", JSON);
+                                                                                                [cell.instaImageView setImageWithURL:[NSURL URLWithString:[JSON objectForKey:@"url"]]];
+                                                                                            }
+                                                                                            failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                                                                NSLog(@"error:%@", error);
+                                                                                            }];
+        [operation start];
+                
     }
     
     return cell;

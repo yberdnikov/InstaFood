@@ -10,6 +10,6 @@
 
 @interface ExploreCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UIImageView *imageView;
+@property (nonatomic, weak) IBOutlet UIImageView *instaImageView;
 
 @end
