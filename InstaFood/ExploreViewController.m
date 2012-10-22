@@ -13,6 +13,7 @@
 #import "ExploreCell.h"
 #import "Entities.h"
 #import "Urls.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ExploreViewController () <UITableViewDataSource, UITableViewDelegate>
 
