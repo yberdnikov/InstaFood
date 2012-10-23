@@ -11,10 +11,8 @@
 #import "TweetObject.h"
 #import "Statuses.h"
 #import "ExploreCell.h"
-#import "Entities.h"
-#import "Urls.h"
 #import "UIImageView+AFNetworking.h"
-#import "AFJSONRequestOperation.h"
+#import "User.h"
 
 @interface ExploreViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -51,9 +49,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.rowHeight = 80.0;
 	// Do any additional setup after loading the view.
-    UIImage *bgImage = [UIImage imageNamed:@"edit_background.png"];
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:bgImage]];
+    [self.tableView setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
     
     [self getInstaFoodSearchResults];
 }
@@ -74,9 +72,32 @@
 {
     ExploreCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    Statuses *tweet = [tweets objectAtIndex:indexPath.row];
+    [cell prepareForTableView:tableView indexPath:indexPath];
     
+    Statuses *statuses = [tweets objectAtIndex:indexPath.row];
+    
+    [cell.profileImageView setImageWithURL:[NSURL URLWithString:statuses.user.profile_background_image_url]];
+    
+    cell.profileNameLabel.text = statuses.user.name;
+    cell.profileNameLabel.font = [UIFont fontWithName:@"Vollkorn-Bold" size:12.0];
+    
+    cell.twitterTextLabel.text = statuses.text;
+    cell.twitterTextLabel.font = [UIFont fontWithName:@"Vollkorn-Regular" size:12.0];
+        
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Statuses *statuses = [tweets objectAtIndex:indexPath.row];
+    CGSize constraint = CGSizeMake(206.0, 2000.0);
+    CGSize textSize = [statuses.text sizeWithFont:[UIFont fontWithName:@"Vollkorn-Regular" size:12.0]
+                                             constrainedToSize:constraint
+                                                 lineBreakMode:NSLineBreakByTruncatingTail];
+    
+    float tableHeight = MAX(80.0, textSize.height + 27.0);
+    
+    return tableHeight;
 }
 
 

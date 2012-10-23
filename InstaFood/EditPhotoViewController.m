@@ -40,9 +40,8 @@ void kShowAlert (NSString *message)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    UIImage *bgImage = [UIImage imageNamed:@"edit_background.png"];
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:bgImage]];
+    [self.view setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
+
 }
 
 - (void)didReceiveMemoryWarning

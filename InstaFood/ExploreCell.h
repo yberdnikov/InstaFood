@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PrettyKit.h"
+#import "NIAttributedLabel.h"
 
-@interface ExploreCell : UITableViewCell
+@interface ExploreCell : PrettyTableViewCell
 
-@property (nonatomic, weak) IBOutlet UIImageView *instaImageView;
+@property (nonatomic, weak) IBOutlet UIImageView *profileBorder;
+@property (nonatomic, weak) IBOutlet UIImageView *profileImageView;
+@property (nonatomic, weak) IBOutlet UILabel *profileNameLabel;
+@property (nonatomic, weak) IBOutlet NIAttributedLabel *twitterTextLabel;
 
 @end
