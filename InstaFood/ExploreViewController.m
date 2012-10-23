@@ -75,21 +75,6 @@
     ExploreCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
     Statuses *tweet = [tweets objectAtIndex:indexPath.row];
-    if (tweet.entities.urls.count > 0) {
-        Urls *urls = [tweet.entities.urls objectAtIndex:0];
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.instagram.com/oembed?url=%@",urls.expanded_url]];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
-                                                                                            success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-                                                                                                NSLog(@"response:%@", JSON);
-                                                                                                [cell.instaImageView setImageWithURL:[NSURL URLWithString:[JSON objectForKey:@"url"]]];
-                                                                                            }
-                                                                                            failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                                                                                                NSLog(@"error:%@", error);
-                                                                                            }];
-        [operation start];
-                
-    }
     
     return cell;
 }
