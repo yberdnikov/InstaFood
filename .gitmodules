@@ -9,7 +9,7 @@
 	url = git://github.com/AFNetworking/AFNetworking.git
 [submodule "nimbus"]
 	path = nimbus
-	url = https://github.com/jverkoey/nimbus.git
+	url = https://github.com/blurboy1985/nimbus.git
 [submodule "PrettyKit"]
 	path = PrettyKit
 	url = git://github.com/vicpenap/PrettyKit.git
