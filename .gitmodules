@@ -12,4 +12,4 @@
 	url = https://github.com/blurboy1985/nimbus.git
 [submodule "PrettyKit"]
 	path = PrettyKit
-	url = git://github.com/vicpenap/PrettyKit.git
+	url = https://github.com/blurboy1985/PrettyKit.git
