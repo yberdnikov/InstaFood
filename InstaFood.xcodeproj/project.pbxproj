@@ -21,6 +21,7 @@
 		84422AE6162A88360077E6D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84422AE3162A88360077E6D5 /* Default-568h@2x.png */; };
 		84422AE7162A88360077E6D5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 84422AE4162A88360077E6D5 /* Default.png */; };
 		84422AE8162A88360077E6D5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84422AE5162A88360077E6D5 /* Default@2x.png */; };
+		846CE6B516382C2800EA6105 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846CE6B416382C2700EA6105 /* DetailViewController.m */; };
 		846F32201636492E0018D664 /* NIAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F320B1636492E0018D664 /* NIAttributedLabel.m */; };
 		846F32211636492E0018D664 /* NSMutableAttributedString+NimbusAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F320F1636492E0018D664 /* NSMutableAttributedString+NimbusAttributedLabel.m */; };
 		846F32251636492E0018D664 /* NimbusWebController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 846F32161636492E0018D664 /* NimbusWebController.bundle */; };
@@ -107,6 +108,8 @@
 		84CE06201632CF3400271541 /* Vollkorn-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CE061C1632CF3400271541 /* Vollkorn-BoldItalic.ttf */; };
 		84CE06211632CF3400271541 /* Vollkorn-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CE061D1632CF3400271541 /* Vollkorn-Italic.ttf */; };
 		84CE06221632CF3400271541 /* Vollkorn-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CE061E1632CF3400271541 /* Vollkorn-Regular.ttf */; };
+		84DB74921638CF3100FC07F5 /* DetailImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB74911638CF3100FC07F5 /* DetailImageCell.m */; };
+		84DB74951638CF6200FC07F5 /* DetailStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB74941638CF6200FC07F5 /* DetailStatusCell.m */; };
 		84E08764163553E9005E3D58 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E08752163553E9005E3D58 /* AFHTTPClient.m */; };
 		84E08765163553E9005E3D58 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E08754163553E9005E3D58 /* AFHTTPRequestOperation.m */; };
 		84E08766163553E9005E3D58 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E08756163553E9005E3D58 /* AFImageRequestOperation.m */; };
@@ -121,6 +124,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840E19F01638C0A90037039E /* DetailStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStatusCell.h; sourceTree = "<group>"; };
 		842486AA16336A3C00EC3C0A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		842486AD16336A4000EC3C0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		842486AF163370DA00EC3C0A /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 		84422AE3162A88360077E6D5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		84422AE4162A88360077E6D5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		84422AE5162A88360077E6D5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		846CE6B316382C2700EA6105 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		846CE6B416382C2700EA6105 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		846F320A1636492E0018D664 /* NIAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIAttributedLabel.h; sourceTree = "<group>"; };
 		846F320B1636492E0018D664 /* NIAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIAttributedLabel.m; sourceTree = "<group>"; };
 		846F320C1636492E0018D664 /* NimbusAttributedLabel+Namespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NimbusAttributedLabel+Namespace.h"; sourceTree = "<group>"; };
@@ -288,6 +294,9 @@
 		84CE061C1632CF3400271541 /* Vollkorn-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-BoldItalic.ttf"; sourceTree = "<group>"; };
 		84CE061D1632CF3400271541 /* Vollkorn-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-Italic.ttf"; sourceTree = "<group>"; };
 		84CE061E1632CF3400271541 /* Vollkorn-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-Regular.ttf"; sourceTree = "<group>"; };
+		84DB74901638CF3100FC07F5 /* DetailImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailImageCell.h; sourceTree = "<group>"; };
+		84DB74911638CF3100FC07F5 /* DetailImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailImageCell.m; sourceTree = "<group>"; };
+		84DB74941638CF6200FC07F5 /* DetailStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStatusCell.m; sourceTree = "<group>"; };
 		84E08751163553E9005E3D58 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		84E08752163553E9005E3D58 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		84E08753163553E9005E3D58 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -404,8 +413,14 @@
 				8476F4E61632F35100AEF3AE /* AFSubPhotoEditorViewController.m */,
 				842486AF163370DA00EC3C0A /* ExploreViewController.h */,
 				842486B0163370DA00EC3C0A /* ExploreViewController.m */,
+				846CE6B316382C2700EA6105 /* DetailViewController.h */,
+				846CE6B416382C2700EA6105 /* DetailViewController.m */,
 				8478CDF616350DB100E950A9 /* ExploreCell.h */,
 				8478CDF716350DB100E950A9 /* ExploreCell.m */,
+				840E19F01638C0A90037039E /* DetailStatusCell.h */,
+				84DB74941638CF6200FC07F5 /* DetailStatusCell.m */,
+				84DB74901638CF3100FC07F5 /* DetailImageCell.h */,
+				84DB74911638CF3100FC07F5 /* DetailImageCell.m */,
 				84969010163395D4004A558F /* Objects */,
 				84422AC7162A87FF0077E6D5 /* Supporting Files */,
 			);
@@ -846,6 +861,9 @@
 				846F32AE163653150018D664 /* PrettyShadowPlainTableview.m in Sources */,
 				846F32AF163653150018D664 /* PrettyTabBar.m in Sources */,
 				846F32B0163653150018D664 /* PrettyToolbar.m in Sources */,
+				846CE6B516382C2800EA6105 /* DetailViewController.m in Sources */,
+				84DB74921638CF3100FC07F5 /* DetailImageCell.m in Sources */,
+				84DB74951638CF6200FC07F5 /* DetailStatusCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

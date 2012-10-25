@@ -1,21 +1,19 @@
 //
-//  ExploreCell.h
+//  DetailCellOne.h
 //  InstaFood
 //
-//  Created by Daniel-Mac on 22/10/12.
+//  Created by Daniel-Mac on 25/10/12.
 //  Copyright (c) 2012 MagicDev. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "PrettyKit.h"
+#import "PrettyTableViewCell.h"
 #import "NIAttributedLabel.h"
 
-@interface ExploreCell : PrettyTableViewCell
+@interface DetailStatusCell : PrettyTableViewCell
 
 @property (nonatomic, weak) IBOutlet UIImageView *profileImageView;
 @property (nonatomic, weak) IBOutlet UILabel *profileNameLabel;
 @property (nonatomic, weak) IBOutlet NIAttributedLabel *twitterTextLabel;
 @property (nonatomic, weak) IBOutlet UILabel *screenNameLabel;
-
 
 @end

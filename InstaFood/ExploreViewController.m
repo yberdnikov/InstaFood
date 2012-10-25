@@ -13,6 +13,7 @@
 #import "ExploreCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "User.h"
+#import "DetailViewController.h"
 
 @interface ExploreViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -39,7 +40,13 @@
                         Statuses *status = obj;
                         [tweets addObject:status];
                     }];
-                    [self.tableView reloadData];
+                    
+                    NSMutableArray *indexes = [NSMutableArray new];
+                    for (int i=0; i<tweets.count; i++) {
+                        [indexes addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+                    }
+                    [self.tableView insertRowsAtIndexPaths:indexes withRowAnimation:UITableViewRowAnimationTop];
+                    
                 }
             }];
         }
@@ -51,7 +58,7 @@
     [super viewDidLoad];
     self.tableView.rowHeight = 80.0;
 	// Do any additional setup after loading the view.
-    [self.tableView setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
+    [self.view setBackgroundColor:[UIColor colorWithRed:0.882 green:0.882 blue:0.882 alpha:1]];
     
     [self getInstaFoodSearchResults];
 }
@@ -73,6 +80,10 @@
     ExploreCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
     [cell prepareForTableView:tableView indexPath:indexPath];
+    cell.shadowOpacity = 1.0;
+    cell.customSeparatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+    cell.selectionGradientStartColor = [UIColor colorWithRed:0.725 green:0.882 blue:0.906 alpha:1];
+    cell.selectionGradientEndColor = [UIColor colorWithRed:0.725 green:0.882 blue:0.906 alpha:1];
     
     Statuses *statuses = [tweets objectAtIndex:indexPath.row];
     
@@ -83,7 +94,10 @@
     
     cell.twitterTextLabel.text = statuses.text;
     cell.twitterTextLabel.font = [UIFont fontWithName:@"Vollkorn-Regular" size:12.0];
-        
+
+    cell.screenNameLabel.text = [NSString stringWithFormat:@"@%@", statuses.user.screen_name];
+    cell.screenNameLabel.font = [UIFont fontWithName:@"Vollkorn-Regular" size:12.0];
+
     return cell;
 }
 
@@ -100,5 +114,23 @@
     return tableHeight;
 }
 
+#pragma mark - UITableviewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    Statuses *statuses = [tweets objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"DetailSegue" sender:statuses];
+}
+
+#pragma mark - segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"DetailSegue"]) {
+        DetailViewController *controller = segue.destinationViewController;
+        controller.statuses = sender;
+    }
+}
 
 @end

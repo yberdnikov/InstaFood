@@ -40,7 +40,7 @@ void kShowAlert (NSString *message)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
+    [self.view setBackgroundColor:[UIColor colorWithRed:0.882 green:0.882 blue:0.882 alpha:1]];
 
 }
 
