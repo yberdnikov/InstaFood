@@ -16,6 +16,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *profileNameLabel;
 @property (nonatomic, weak) IBOutlet NIAttributedLabel *twitterTextLabel;
 @property (nonatomic, weak) IBOutlet UILabel *screenNameLabel;
-
+@property (nonatomic, weak) IBOutlet UIImageView *photoImageView;
 
 @end

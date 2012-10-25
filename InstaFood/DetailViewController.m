@@ -15,8 +15,9 @@
 #import "Url.h"
 #import "Entities.h"
 #import "AFJSONRequestOperation.h"
+#import "NIWebController.h"
 
-@interface DetailViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface DetailViewController () <UITableViewDataSource, UITableViewDelegate, NIAttributedLabelDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
@@ -60,7 +61,10 @@
         
         cell.twitterTextLabel.text = _statuses.text;
         cell.twitterTextLabel.font = [UIFont fontWithName:@"Vollkorn-Regular" size:14.0];
-        
+        cell.twitterTextLabel.autoDetectLinks = YES;
+        cell.twitterTextLabel.linkColor = [UIColor blueColor];
+        cell.twitterTextLabel.delegate = self;
+
         cell.screenNameLabel.text = [NSString stringWithFormat:@"@%@", _statuses.user.screen_name];
         cell.screenNameLabel.font = [UIFont fontWithName:@"Vollkorn-Regular" size:16.0];
         
@@ -75,27 +79,29 @@
         cell.cornerRadius = 0.0;
         
         NSArray *urls = _statuses.entities.urls;
-        NSLog(@"urls: '%@'", urls);
-        Urls *url = [urls objectAtIndex:0];
-        NSURL *instaURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.instagram.com/oembed?url=%@", url.expanded_url]];
-        
-        AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:[NSURLRequest requestWithURL:instaURL]
-                                                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-                                                            
-                                                            [cell.photoImageView setImageWithURL:[NSURL URLWithString:[JSON objectForKey:@"url"]]];
-                                                            
-                                                        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                                                            
-                                                            NSLog(@"%@", [error localizedDescription]);
-                                                            
-                                                        }];
-        
-        [operation start];
+        if (urls.count > 0) {
+            Urls *url = [urls objectAtIndex:0];
+            [cell.photoImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/media", url.expanded_url]]];
+        }
         
         return cell;
     }
     
     return nil;
+}
+
+- (void)attributedLabel:(NIAttributedLabel *)attributedLabel didSelectTextCheckingResult:(NSTextCheckingResult *)result atPoint:(CGPoint)point
+{
+    NSLog(@"%@",result.URL.absoluteString);
+    [self performSegueWithIdentifier:@"WebSegue" sender:result.URL];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"WebSegue"]) {
+        NIWebController *controller = segue.destinationViewController;
+        [controller openURL:sender];
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

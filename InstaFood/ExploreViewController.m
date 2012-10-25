@@ -14,6 +14,8 @@
 #import "UIImageView+AFNetworking.h"
 #import "User.h"
 #import "DetailViewController.h"
+#import "Entities.h"
+#import "Urls.h"
 
 @interface ExploreViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -40,13 +42,9 @@
                         Statuses *status = obj;
                         [tweets addObject:status];
                     }];
-                    
-                    NSMutableArray *indexes = [NSMutableArray new];
-                    for (int i=0; i<tweets.count; i++) {
-                        [indexes addObject:[NSIndexPath indexPathForRow:i inSection:0]];
-                    }
-                    [self.tableView insertRowsAtIndexPaths:indexes withRowAnimation:UITableViewRowAnimationTop];
-                    
+
+                    [self.tableView reloadData];
+                
                 }
             }];
         }
@@ -97,6 +95,14 @@
 
     cell.screenNameLabel.text = [NSString stringWithFormat:@"@%@", statuses.user.screen_name];
     cell.screenNameLabel.font = [UIFont fontWithName:@"Vollkorn-Regular" size:12.0];
+    
+    NSArray *urls = statuses.entities.urls;
+    if (urls.count > 0) {
+        Urls *url = [urls objectAtIndex:0];
+        [cell.photoImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/media", url.expanded_url]]];
+    }
+    cell.twitterTextLabel.autoDetectLinks = YES;
+    cell.twitterTextLabel.linkColor = [UIColor blueColor];
 
     return cell;
 }
@@ -104,7 +110,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Statuses *statuses = [tweets objectAtIndex:indexPath.row];
-    CGSize constraint = CGSizeMake(206.0, 2000.0);
+    CGSize constraint = CGSizeMake(161.0, 2000.0);
     CGSize textSize = [statuses.text sizeWithFont:[UIFont fontWithName:@"Vollkorn-Regular" size:12.0]
                                              constrainedToSize:constraint
                                                  lineBreakMode:NSLineBreakByTruncatingTail];
